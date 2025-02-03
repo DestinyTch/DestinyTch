@@ -1,0 +1,484 @@
+/* style.css */
+* {
+   padding: 0;
+   margin: 0;
+   user-select: none;
+   box-sizing: border-box;
+   font-family: sans-serif;
+   text-decoration: none;
+   list-style: none;
+   
+}
+
+body {
+   background-color: #101397; /* Light background */
+   color: #000000; /* Dark text color */
+   background: linear-gradient(100deg, #e4ce0891, #f7f7f7, #fcfbff); /* Gradient background */
+   background-size: 400% 400%; /* For animation */
+   animation: gradientRotate 6s ease infinite; 
+}
+
+.header {
+   position: sticky;
+   top: 0;
+   width: 100%;
+   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+   background-color: #ffffff;
+   z-index: 1;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 30px;
+}
+
+.logo a {
+   font-size: 24px;
+   font-weight: bold;
+   color:   #000000;
+}
+
+.logo a span {
+   color: #8739fa;
+}
+
+.menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.menu a {
+   display: block;
+   padding: 7px 15px;
+   font-size: 17px;
+   font-weight: 500;
+   transition: 0.2s all ease-in-out;
+   color: #000000;
+}
+
+.menu a:hover {
+   color: #8739fa; /* Highlight on hover */
+}
+
+.menu-icon {
+   display: none;
+}
+
+#menu-toggle {
+   display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+   transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+   .menu {
+       flex-direction: column;
+       background-color: #f8f8f8ce;
+       align-items: start;
+       position: absolute;
+       top: 70px;
+       left: 0;
+       width: 100%;
+       z-index: 1;
+       transform: scale(1, 0);
+       transform-origin: top;
+       transition: transform 0.3s ease-in-out;
+       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   }
+
+   .menu a {
+       margin-left: 12px;
+       padding: 15px; /* Increased padding for mobile */
+       border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+   }
+
+   .menu li {
+       margin-bottom: 0; /* Removed margin */
+   }
+
+   .menu-icon {
+       display: block;
+       color: #000000;
+       font-size: 28px;
+       cursor: pointer;
+   }
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: calc(100vh - 70px); /* Ensure main takes up full viewport height */
+   text-align: center;
+   padding: 20px;
+}
+
+h1 {
+   font-size: 3em;
+   margin-bottom: 20px;
+   opacity: 0;
+   transform: translateY(-20px);
+   animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.highlight {
+   color: #8739fa;
+}
+
+#description {
+   font-size: 1.2em;
+   line-height: 1.6;
+   max-width: 600px;
+   opacity: 0;
+   transform: translateY(20px);
+   animation: fadeInUp 1s ease-in-out 0.5s forwards;
+   margin-bottom: 30px; /* Added margin */
+}
+
+@keyframes fadeInUp {
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+.link-cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+   gap: 20px;
+   margin-top: 30px;
+}
+
+@media (max-width: 900px) { /* Adjust breakpoint as needed */
+   .link-cards {
+       grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+   }
+}
+
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+   .link-cards {
+       grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+   }
+}
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   border-radius: 10px;
+   background-color: #fff; /* White background */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.2s ease-in-out;
+   overflow: hidden;
+   position: relative;
+}
+
+.card img {
+   width: 80px;
+   height: 80px;
+   margin-bottom: 10px;
+   max-width: 100%;
+   height: auto;
+   transition: transform 0.3s ease;
+}
+
+.card span {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #333;
+   transition: color 0.3s ease;
+}
+
+.card:hover {
+   transform: scale(1.05);
+   background-color: #ffffff;
+}
+
+.card:hover img {
+   transform: scale(1.1);
+}
+
+.card:hover span {
+   color: #8739fa; /* Highlight color on hover */
+}
+
+.card::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.05); /* Subtle overlay */
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.3s ease;
+   z-index: -1;
+}
+
+.card:hover::before {
+   transform: scaleX(1);
+}
+
+footer {
+   background-color: #151418;
+   color: #fff;
+   text-align: center;
+   padding: 10px 0;
+   margin-top: 30px;
+}
+
+/* style.css */
+
+/* ... (rest of your CSS) ... */
+
+/* Card Animations */
+.card {
+   /* ... (existing card styles) ... */
+   perspective: 1000px; /* For 3D effect */
+   transition: transform 0.5s, box-shadow 0.5s; /* Smooth transitions */
+}
+
+.card:hover {
+   transform: rotateY(10deg) scale(1.05); /* 3D rotation on hover */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.card img {
+   /* ... (existing image styles) ... */
+   transition: transform 0.5s; /* Smooth scaling */
+}
+
+.card:hover img {
+   transform: scale(1.2); /* More pronounced scaling */
+}
+
+.card::before {
+   /* ... (existing overlay styles) ... */
+   opacity: 0; /* Initially hidden */
+   transition: opacity 0.5s, transform 0.5s; /* Smooth transitions */
+}
+
+.card:hover::before {
+   opacity: 1; /* Show on hover */
+   transform: scaleX(1.2); /* Slightly wider overlay */
+}
+
+/* Text Glow Effect */
+.card span {
+   /* ... (existing text styles) ... */
+   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing text */
+   transition: text-shadow 0.5s; /* Smooth transition */
+}
+
+.card:hover span {
+   text-shadow: 0 0 15px rgba(135, 57, 250, 0.8); /* More intense glow on hover */
+}
+
+
+@keyframes gradientRotate {
+   0% {
+       background-position: 0% 50%;
+   }
+   50% {
+       background-position: 100% 50%;
+   }
+   100% {
+       background-position: 0% 50%;
+   }
+}
+
+/* ... (rest of your CSS) ... */
+
+/* style.css */
+
+/* ... (your other styles) ... */
+
+/* style.css */
+
+/* ... (rest of your CSS) ... */
+footer {
+   background: #750606;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+}
+
+footer .content {
+   max-width: 1250px;
+   margin: auto;
+   padding: 20px 40px;
+}
+
+footer .content .top {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 30px;
+}
+
+.content .top .logo-details {
+   color: #fff;
+   font-size: 24px;
+}
+
+/* ... (rest of your .top styles) ... */
+
+footer .content .link-boxes {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap; /* This is KEY for responsiveness */
+}
+
+footer .content .link-boxes .box {
+   width: calc(25% - 20px); /* Adjust width for 4 boxes, adjust as needed */
+   margin-bottom: 20px;
+}
+
+.content .link-boxes .box .link_name {
+   color: #fff;
+   font-size: 16px;
+   font-weight: 400;
+   margin-bottom: 8px;
+   position: relative;
+}
+
+/* ... (rest of your .box styles) ... */
+
+.content .link-boxes .input-box {
+   width: 50%; /* Adjust width as needed */
+   margin-right: 0;
+   margin-bottom: 20px;
+}
+
+.link-boxes .input-box input {
+   height: 35px;
+   width: 100%;
+   /* ... (rest of your input styles) ... */
+}
+
+/* ... (rest of your input and button styles) ... */
+
+footer .bottom-details {
+   width: 100%;
+   background: #750606;
+}
+
+footer .bottom-details .bottom_text {
+   max-width: 1250px;
+   margin: auto;
+   padding: 15px 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap; /* Make bottom text wrap too */
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+   font-size: 12px;
+   /* ... (rest of your text styles) ... */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {  /* Example breakpoint for tablets and smaller */
+   footer .content .link-boxes .box {
+       width: calc(50% - 20px); /* Two boxes per row */
+   }
+
+   .content .link-boxes .input-box {
+       width: 100%;  /* Full width on smaller screens */
+   }
+
+   footer .bottom-details .bottom_text {
+       justify-content: center; /* Center the bottom text */
+       text-align: center; /* Center text within the span */
+   }
+}
+
+@media (max-width: 480px) { /* Example breakpoint for phones */
+   footer .content .link-boxes .box {
+       width: 100%; /* One box per row */
+   }
+
+   .bottom-details .bottom_text span,
+   .bottom-details .bottom_text a {
+       display: block; /* Stack the copyright and links */
+       margin-bottom: 5px; /* Add some spacing */
+       opacity: 1;
+   }
+}
+.run{
+   font-style: 28px;
+}
+.overlay {
+   position: fixed; /* Stay in place */
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 0, 0, 0.445); /* Semi-transparent black */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000; /* Ensure it's on top */
+}
+
+.popup {
+   background-color: white;
+   padding: 20px;
+   border-radius: 5px;
+}
+#deerunz {
+  
+   font-size: 23px;
+   color: #d8b7b7;
+   /* Animate letter spacing */
+}
+h1{
+   font-size: 18px;
+}
+#deeruunz {
+   display: inline-block;
+   font-size: 24px;
+   color: #fff;
+   animation: letterSpacing 15s linear infinite; /* Animate letter spacing */
+}
+
+@keyframes letterSpacing {
+   0% {
+       letter-spacing: 0; /* Normal letter spacing */
+   }
+   50% {
+       letter-spacing: 10px; /* Increased letter spacing */
+   }
+   100% {
+       letter-spacing: 0; /* Back to normal letter spacing */
+   }
+}
+
+/* Responsive adjustments */
+
+.letter {
+   display: inline-block;
+   opacity: 0;
+
+   animation-fill-mode: both;
+}
+
+#runz {
+   font-size: 28px;
+   color: red;
+}
+
+.a{
+   color: #e4ce0891;
+}
