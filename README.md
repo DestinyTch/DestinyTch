@@ -21,9 +21,6 @@ I enjoy turning ideas into digital experiences and constantly improving my skill
 ![DestinyTch's GitHub stats](https://github-readme-stats.vercel.app/api?username=DestinyTch&show_icons=true&theme=radical)
 ---
 
-### 📈 GitHub Contributions
-
-![DestinyTch's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=DestinyTch&theme=radical)
 
 ![DestinyTch's GitHub stats](https://github-readme-stats.vercel.app/api?username=DestinyTch&show_icons=true&theme=radical&include_all_commits=true)
 
