@@ -1,6 +1,6 @@
 # 👋 Hi, I’m Destiny Tch
 
-I’m a **Web Developer** passionate about building fast, modern, and user-friendly websites.  
+I’m a **Web Developer** passionate about building fast, modern, and user-friendly web applications.  
 I enjoy turning ideas into digital experiences and constantly improving my skills with new technologies.
 
 - 👀 **Interests:** Web development, open-source, UI/UX, and scalable web architectures.  
