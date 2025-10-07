@@ -19,7 +19,7 @@ I enjoy turning ideas into digital experiences and constantly improving my skill
 
 ![DestinyTch's GitHub Stats](https://github-readme-stats.vercel.app/api?username=DestinyTch&show_icons=true&theme=radical&include_all_commits=true&count_private=true)
 
-![DestinyTch's GitHub stats](https://github-readme-stats.vercel.app/api?username=DestinyTch&show_icons=true&theme=radical&include_all_commits=true&count_private=true)
+![GitHub Profile Summary Card](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DestinyTch&theme=radical)
 
 ---
 
